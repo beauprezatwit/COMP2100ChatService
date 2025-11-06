@@ -216,10 +216,8 @@ public class TCPServer
 
             try
                 {
-                this.in = new BufferedReader( new InputStreamReader( this.socket.getInputStream(),
-                                                                     StandardCharsets.UTF_8 ) ) ;
-                this.out = new BufferedWriter( new OutputStreamWriter( this.socket.getOutputStream(),
-                                                                       StandardCharsets.UTF_8 ) ) ;
+                this.in = new BufferedReader( new InputStreamReader( this.socket.getInputStream()) ) ;
+                this.out = new BufferedWriter( new OutputStreamWriter( this.socket.getOutputStream()) ) ;
 
                 System.out.println( "Handler started for client socket: " +
                                     this.socket.getRemoteSocketAddress() ) ;
